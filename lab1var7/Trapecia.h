@@ -10,17 +10,22 @@
  * есть внутри этого класса)
  */
 
-class Romb : public Figure
+class Trapecia : public Figure
 {
-    double a;
-public:
-    Romb();
-    Romb(double _a); // Конструктор с параметрами
+    double a; // Стороны трапеции
+    double b;
+    double c;
+    double d;
 
-    ~Romb();
+public:
+    Trapecia();
+    Trapecia(double _a, double _b, double _c, double _d); // Конструктор с параметрами
+
+    ~Trapecia();
 
     double  GetPerimetr();
     void    PrintName();
+
 };
 
 #endif // CIRCLE_H

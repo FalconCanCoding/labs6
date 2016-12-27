@@ -19,22 +19,9 @@ void print(std::vector<int>& v)
 
 void sort(std::vector<int>& v)
 {
-    for (int idx_i = 0; idx_i < v.size() - 1; idx_i++)
-    {
-        int min_idx = idx_i;
-        for (int idx_j = idx_i + 1; idx_j < v.size(); idx_j++)
-        {
-            if (v[idx_j] < v[min_idx])
-            {
-                min_idx = idx_j;
-            }
-        }
-
-        if (min_idx != idx_i)
-        {
-            std::swap(v[idx_i], v[min_idx]);
-        }
-    }
+    for(int i= 1; i < v.size(); i++)
+        for(int j = i; j > 0 && v[j-1] > v[j]; j--) // пока j>0 и элемент j-1 > j, x-массив int
+            std::swap(v[j-1], v[j]);        // меняем местами элементы j и j-1
 }
 
 int main() // Без замера времени (нет кросплатформенной библиотеки)

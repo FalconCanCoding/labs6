@@ -1,6 +1,6 @@
 #include "figure.h"
 #include "rectangle.h"
-#include "romb.h"
+#include "Trapecia.h"
 #include "queue.h"
 
 #include <iostream>
@@ -10,15 +10,15 @@ int main()
 {
     Figure *f1, *f2, *f3, *f4, *f5, *f6;
     Rectangle *r1, *r2, *r3;
-    Romb *c1, *c2, *c3;
+    Trapecia *c1, *c2, *c3;
 
     r1 = new Rectangle(1, 2);  // Конструктор с параметрами
     r2 = new Rectangle(5, 7);  // вместо
     r3 = new Rectangle(15, 3); // r->a = x и r->b = y
 
-    c1 = new Romb(1);
-    c2 = new Romb(2);
-    c3 = new Romb(3);
+    c1 = new Trapecia(1,1,1,1);
+    c2 = new Trapecia(2,2,2,2);
+    c3 = new Trapecia(3,3,3,3);
 
     f1 = (Figure*)r1;
     f2 = (Figure*)r2;
